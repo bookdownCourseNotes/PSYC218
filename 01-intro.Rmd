@@ -1,21 +1,43 @@
-# Introduction {#intro}
+# Statistics and the Scientific Method {#intro}
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+## Chapter learning objectives
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+* Know common terms in statistics such as:
+  * Population
+  * Sample
+  * Variable
+  * Independent variable
+  * Dependent Varible
+  * Data
+  * Statistic
+  * Parameter
+* Explain why need random sampling
+* Contrast descriptive and inferential statistics
 
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
-```
+## Definitions
 
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+In this textbook and future stat courses, there are some common terms used (will be updated):
 
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
+| Term                      | Definition                                                                                               | Example and/or Explanation                                                                                                                                                                 |
+|---------------------------|----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Population                | A population is a complete set of individuals, objects, or scores that we interested in studying.        | The larger group from which subjects were selected from for example all the students in HSP                                                                                              |
+| Sample                    | A sample is a subset of the population                                                                   | It is not practical or feasible to have an entire population in a study. As such we take a group of subjects from the population. For example, n participants signed up for HSP study.   |
+| Variable                  | A variable is any property/characteristic that may have different values depending on condition          | Height, weight, reaction time, drug dosage                                                                                                                                               |
+| Independent variable (IV) | The IV is the variable that is systematically manipulated by investigator                                | A investigator is interested in effects of alcohol on social behaviour. The IV is the amount of alcohol given. Because it is manipulated by the investigator, it is the IV.              |
+| Dependent variable (DV)   | The DV in an experiment is the variable that investigator measures to determine effect of IV             | Sticking with the IV example, the DV could be amount of time on the dance floor or something. Remember, it is called dependent because its results depends on the manipulation.          |
+| Data                      | The measurements that are made on the subjects of an experiment are called data                          | Data set contains the DV and other stuff like age                                                                                                                                        |
+| Statistic                 | Statistic is a number calculated on a sample data that quantifies a characteristic of the sample         | The mean of a sample (average age of students in PSYC 218)                                                                                                                               |
+| Parameter                 | A parameter is a number calculated on population data that quantifies a characteristic of the population | The mean of entire population (average age of every student at UBC)                                                                                                                      |
 
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+## Random Sampling
+In most research, data is collected via a sample of subjects rather then the entire population for which the results are intended to apply. Ideally we can recruit every smoker to conduct an experiment on cardiovascular health but that is very impractical and very costly. As such, researchers take a *random sample*. This will be discussed more in Chap 8 but everyone in the population needs to have the same chance of being selected otherwise we cannot generalize the results to the population as the sample might be biased. When random sampling is conducted, we can have confidence that the results can be generalized to the population and therefore useful and worthwhile.  
+
+## Descriptive and Inferential statistics
+This table highlights some of the major differences between descriptive and inferential statistics. 
+
+| Descriptive statistics                                                                                    | Inferential statistics                                                                 |
+|-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| Describes the data                                                                                        | Make predictions (inferences) from the sample and generalize them to the population    |
+| Typically uses tables and graphs to present the data                                                      | Probability scores used                                                                |
+| Describes the data that is already known                                                                  | Makes conclusion about the population that is beyond the available data                |
+| Measures of central tendency (mean, median, mode) and spread (range, standard deviation) are common tools | Parametric (T-test, ANOVA, regression) and Non-parametric (chi-square, kruskal-wallis) | 

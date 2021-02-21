@@ -1,0 +1,89 @@
+# Measures of Central Tendency and Variability
+
+## Overview
+In this chapter, I will quickly go over measures of central tendency and variability.  
+
+## Learning Objectives
+By the end of the chapter students should be able to: 
+
+* Solve math problems in R
+* Able to assign variables in R
+* Know the basic variable types in R
+
+## Measures of Central Tendency
+
+### The Arithmetic mean
+The **arithmetic mean** is defined as the sum of the scores divided by the number of scores. It is the average value and is sensitive to outliers. The symbol for sample mean is $\bar{X}$  and the equation form is: 
+$$
+\bar{X} = \frac{\sum{X_1}}{N} = \frac{X_1 + X_2 + X_3 + ... + X_N}{N}
+$$
+The calculations for the mean  of the population is the same except the symbol for population is $\mu$ (Greek letter mu). 
+$$
+\mu = \frac{\sum{X_1}}{N} = \frac{X_1 + X_2 + X_3 + ... + X_N}{N}
+$$
+
+#### Properties of the mean
+The mean has many important properties and characteristics: 
+
+**1. The mean is sensitive to the exact value of all the scores in the distribution.** To calculate the mean, you need to add all the scores. As such, a change in in any value will change the mean (unlike median and mode).
+
+**2. The sum of the deviations about the equals zero.** Mathematically, this property becomes $\sum(X_i - \bar{X}) = 0$. This states that if the mean is subtracted from each score, the sum of the differences will equal zero. 
+
+### The Overall mean
+
+### The Median
+
+### The Mode
+
+## Measures of Variability 
+
+### The Range
+
+### The Standard Deviation
+
+### The variance 
+
+## Example in R
+In your textbook, it asks you to use SPSS to compute the mean, sd, variance, and range for the following set of mathematics exam scores. As well, to name it `Mathexam`. Here I will show you how to do this same task in R. I think you will realize that Descriptive statistics in R is very simple!  
+
+Mathexam: 78, 65, 47, 38, 86, 57, 88, 66, 43, 95, 73, 82, 61
+
+let's start by creating a a variable for these numbers and call it `math_exam`. 
+```{r}
+math_exam <- c(78, 65, 47, 38, 86, 57, 88, 66, 43, 95, 73, 82, 61)
+```
+
+In R, 
+
+* The function `mean()` and `median()` is used to compute the mean and median, respectively,
+* The function `sd()` and `var()` is used to compute the standard deviation and variance, respectively. 
+* the function `min()`, `max()`, and `range()` is used to compute the minimum value, maximum value, and range, respectively. 
+
+```{r}
+# What was the mean exam grade?
+mean(math_exam)
+# What was median grade?
+median(math_exam)
+# What was the standard deviation?
+sd(math_exam)
+# What was the varience?
+var(math_exam)
+# What was the lowest grade?
+min(math_exam)
+# What was the highest grade?
+max(math_exam)
+# What was the lowest and the highest grade?
+range(math_exam)
+```
+
+Alternatively, you can use the `summary()` function to display several statistic summaries. 
+
+```{r}
+summary(math_exam)
+```
+
+Or you can use `pastecs::stat.desc()` for even more statistic summaries.
+```{r}
+library(pastecs)
+stat.desc(math_exam)
+```

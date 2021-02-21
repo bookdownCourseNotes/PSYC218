@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Statistics and the Scientific Method | Analysis of Behavioural Data</title>
+  <title>Chapter 3 Basic Mathematical and Measurment Concepts | Analysis of Behavioural Data</title>
   <meta name="description" content="Use of inferential statistics in psychology and conceptual interpretation of data; experimental design (laboratory, field research methods); presentation of data analyses in reports." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Statistics and the Scientific Method | Analysis of Behavioural Data" />
+  <meta property="og:title" content="Chapter 3 Basic Mathematical and Measurment Concepts | Analysis of Behavioural Data" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Statistics and the Scientific Method | Analysis of Behavioural Data" />
+  <meta name="twitter:title" content="Chapter 3 Basic Mathematical and Measurment Concepts | Analysis of Behavioural Data" />
   
   <meta name="twitter:description" content="Use of inferential statistics in psychology and conceptual interpretation of data; experimental design (laboratory, field research methods); presentation of data analyses in reports." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="basic-mathematical-and-measurment-concepts.html"/>
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="methods.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -207,123 +207,65 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="intro" class="section level1" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Statistics and the Scientific Method</h1>
-<div id="chapter-learning-objectives" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Chapter learning objectives</h2>
+<div id="basic-mathematical-and-measurment-concepts" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Basic Mathematical and Measurment Concepts</h1>
+<div id="chapter-learning-objectives-1" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Chapter learning objectives</h2>
+</div>
+<div id="mathematical-notation" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Mathematical Notation</h2>
+</div>
+<div id="summation" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Summation</h2>
+<p>In statistics, <code>summation</code> is one of the most frequent operations performed. The algebraic phrase for summation is:
+<span class="math display">\[
+\sum_{i = 1}^{N}X_i
+\]</span>
+This reads “sum of the x variable from i =1 to N.”</p>
+<!-- * The notion above ($N$) designates which score to include in the summation -->
 <ul>
-<li>Know common terms in statistics such as:
-<ul>
-<li>Population</li>
-<li>Sample</li>
-<li>Variable</li>
-<li>Independent variable</li>
-<li>Dependent Varible</li>
-<li>Data</li>
-<li>Statistic</li>
-<li>Parameter</li>
-</ul></li>
-<li>Explain why need random sampling</li>
-<li>Contrast descriptive and inferential statistics</li>
+<li>The term below (<span class="math inline">\(i=1\)</span>) tells us the first score in the summation</li>
+<li>The Term above (<span class="math inline">\(N\)</span>) tells us the last score in the summation</li>
 </ul>
+<p>This tells us that we are to add the X scores from the first score ending with the Nth score. Thus:
+<span class="math display">\[
+\sum_{i = 1}^{N}X_i = X_1 + X_2 + X_3 + ... X_N
+\]</span>
+The summation of age data in previous table:
+<span class="math display">\[
+\sum_{i = 1}^{N}X_i = X_1 + X_2 + X_3 + X_4 + X_5 + X_6 \\
+= 8 + 10 + 7 + 6 + 10 + 12\\
+= 53
+\]</span>
+If we only want to sum the 2nd, 3rd, 4th, and 5th scores, we could would use:
+<span class="math display">\[
+\sum_{i = 2}^{55}X_i = X_2 + X_3 + X_4 + X_5 \\
+= 10 + 7 + 6 + 10 \\ 
+= 33
+\]</span></p>
+<div id="summation-in-r" class="section level3" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Summation in R</h3>
+<p>Summation in R is very easy. Simply use the <code>sum()</code> function. Here are examples using the same age data.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="basic-mathematical-and-measurment-concepts.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="dv">8</span>,<span class="dv">10</span>,<span class="dv">7</span>,<span class="dv">6</span>,<span class="dv">10</span>,<span class="dv">12</span>)</span></code></pre></div>
+<pre><code>## [1] 53</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="basic-mathematical-and-measurment-concepts.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="dv">10</span>,<span class="dv">7</span>,<span class="dv">6</span>,<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## [1] 33</code></pre>
 </div>
-<div id="definitions" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Definitions</h2>
-<p>In this textbook and future stat courses, there are some common terms used (will be updated):</p>
-<table>
-<colgroup>
-<col width="8%" />
-<col width="33%" />
-<col width="58%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Term</th>
-<th>Definition</th>
-<th>Example and/or Explanation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Population</td>
-<td>A population is a complete set of individuals, objects, or scores that we interested in studying.</td>
-<td>The larger group from which subjects were selected from for example all the students in HSP</td>
-</tr>
-<tr class="even">
-<td>Sample</td>
-<td>A sample is a subset of the population</td>
-<td>It is not practical or feasible to have an entire population in a study. As such we take a group of subjects from the population. For example, n participants signed up for HSP study.</td>
-</tr>
-<tr class="odd">
-<td>Variable</td>
-<td>A variable is any property/characteristic that may have different values depending on condition</td>
-<td>Height, weight, reaction time, drug dosage</td>
-</tr>
-<tr class="even">
-<td>Independent variable (IV)</td>
-<td>The IV is the variable that is systematically manipulated by investigator</td>
-<td>A investigator is interested in effects of alcohol on social behaviour. The IV is the amount of alcohol given. Because it is manipulated by the investigator, it is the IV.</td>
-</tr>
-<tr class="odd">
-<td>Dependent variable (DV)</td>
-<td>The DV in an experiment is the variable that investigator measures to determine effect of IV</td>
-<td>Sticking with the IV example, the DV could be amount of time on the dance floor or something. Remember, it is called dependent because its results depends on the manipulation.</td>
-</tr>
-<tr class="even">
-<td>Data</td>
-<td>The measurements that are made on the subjects of an experiment are called data</td>
-<td>Data set contains the DV and other stuff like age</td>
-</tr>
-<tr class="odd">
-<td>Statistic</td>
-<td>Statistic is a number calculated on a sample data that quantifies a characteristic of the sample</td>
-<td>The mean of a sample (average age of students in PSYC 218)</td>
-</tr>
-<tr class="even">
-<td>Parameter</td>
-<td>A parameter is a number calculated on population data that quantifies a characteristic of the population</td>
-<td>The mean of entire population (average age of every student at UBC)</td>
-</tr>
-</tbody>
-</table>
 </div>
-<div id="random-sampling" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Random Sampling</h2>
-<p>In most research, data is collected via a sample of subjects rather then the entire population for which the results are intended to apply. Ideally we can recruit every smoker to conduct an experiment on cardiovascular health but that is very impractical and very costly. As such, researchers take a <em>random sample</em>. This will be discussed more in Chap 8 but everyone in the population needs to have the same chance of being selected otherwise we cannot generalize the results to the population as the sample might be biased. When random sampling is conducted, we can have confidence that the results can be generalized to the population and therefore useful and worthwhile.</p>
+<div id="measurement-scales" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Measurement scales</h2>
+<div id="nominal-scales" class="section level3" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> Nominal Scales</h3>
 </div>
-<div id="descriptive-and-inferential-statistics" class="section level2" number="2.4">
-<h2><span class="header-section-number">2.4</span> Descriptive and Inferential statistics</h2>
-<p>This table highlights some of the major differences between descriptive and inferential statistics.</p>
-<table>
-<colgroup>
-<col width="54%" />
-<col width="45%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Descriptive statistics</th>
-<th>Inferential statistics</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Describes the data</td>
-<td>Make predictions (inferences) from the sample and generalize them to the population</td>
-</tr>
-<tr class="even">
-<td>Typically uses tables and graphs to present the data</td>
-<td>Probability scores used</td>
-</tr>
-<tr class="odd">
-<td>Describes the data that is already known</td>
-<td>Makes conclusion about the population that is beyond the available data</td>
-</tr>
-<tr class="even">
-<td>Measures of central tendency (mean, median, mode) and spread (range, standard deviation) are common tools</td>
-<td>Parametric (T-test, ANOVA, regression) and Non-parametric (chi-square, kruskal-wallis)</td>
-</tr>
-</tbody>
-</table>
+<div id="ordinal-scales" class="section level3" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> Ordinal Scales</h3>
+</div>
+<div id="ratio-scales" class="section level3" number="3.4.3">
+<h3><span class="header-section-number">3.4.3</span> Ratio Scales</h3>
+</div>
+</div>
+<div id="continuous-and-discrete-variables" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Continuous and Discrete Variables</h2>
 
 </div>
 </div>
@@ -332,8 +274,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="basic-mathematical-and-measurment-concepts.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

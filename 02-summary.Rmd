@@ -1,0 +1,51 @@
+# Basic Mathematical and Measurment Concepts
+
+## Chapter learning objectives
+
+## Mathematical Notation
+
+## Summation
+In statistics, `summation` is one of the most frequent operations performed. The algebraic phrase for summation is:
+$$
+\sum_{i = 1}^{N}X_i
+$$
+This reads "sum of the x variable from i =1 to N".
+
+<!-- * The notion above ($N$) designates which score to include in the summation -->
+* The term below ($i=1$) tells us the first score in the summation
+* The Term above ($N$) tells us the last score in the summation
+
+This tells us that we are to add the X scores from the first score ending with the Nth score. Thus:
+$$
+\sum_{i = 1}^{N}X_i = X_1 + X_2 + X_3 + ... X_N
+$$
+The summation of age data in previous table:
+$$
+\sum_{i = 1}^{N}X_i = X_1 + X_2 + X_3 + X_4 + X_5 + X_6 \\
+= 8 + 10 + 7 + 6 + 10 + 12\\
+= 53
+$$
+If we only want to sum the 2nd, 3rd, 4th, and 5th scores, we could would use:
+$$
+\sum_{i = 2}^{55}X_i = X_2 + X_3 + X_4 + X_5 \\
+= 10 + 7 + 6 + 10 \\ 
+= 33
+$$
+
+
+### Summation in R
+
+Summation in R is very easy. Simply use the `sum()` function. Here are examples using the same age data.
+```{r}
+sum(8,10,7,6,10,12)
+sum(10,7,6,10)
+```
+
+## Measurement scales
+
+### Nominal Scales
+### Ordinal Scales
+### Ratio Scales
+
+
+## Continuous and Discrete Variables
